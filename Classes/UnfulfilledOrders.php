@@ -16,12 +16,20 @@ class UnfulfilledOrders {
 	 * sort array decending by id
 	 */
 	public function sortArray (){
-		
-		usort($this -> unfulfilled_orders, function($a, $b) {
+				
+		usort($this->unfulfilled_orders, function ($first, $second){
+						
+			if($first->isCookie() == $second->isCookie()) {
+				return ($first->getId() < $second->getId()) ? -1 : 1;
+			}
 			
-			return ($a - $b) ? -1 : 1;
+			return ($second->isCookie() < $first->isCookie()) ? -1:1;
+			
 		});
-
+		
+		foreach($this->unfulfilled_orders as $orders) {
+			 echo $orders->getId();
+		}
 	}
 }
 

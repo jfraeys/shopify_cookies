@@ -50,7 +50,7 @@ class Orders {
 						
 			if($products->isCookie() == true){
 				
-				return true;
+				return $products->getAmount();
 			}
 		}
 		
