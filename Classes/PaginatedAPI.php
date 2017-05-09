@@ -1,22 +1,23 @@
 <?php
 /**
- * 
+ * Pagniated Object
  * @author Jeremie Fraeys
  *
  */
 class PaginatedAPI{
 	const URL = "https://backend-challenge-fall-2017.herokuapp.com/orders.json?page=";
+	
 	/**
-	 * 
+	 * returns the URL of each pages
 	 * @param unknown $pages
-	 * @return string
+	 * @return url with pages
 	 */
 	public function orders_url($page){
 		return self::URL . $page;
 	}
 	
 	/**
-	 * 
+	 * gets content of the json file and decodes the jsondata
 	 * @param unknown $url
 	 * @return mixed
 	 */

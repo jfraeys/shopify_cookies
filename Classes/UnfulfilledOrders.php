@@ -1,19 +1,23 @@
 <?php
-
+/**
+ * Unfulfilled Object
+ * @author Jeremie Fraeys
+ *
+ */
 class UnfulfilledOrders {
 	
 	public $unfulfilled_orders = array();
 	
 	/**
-	 *
-	 * @param unknown $unfulfilled_orders
+	 * Adds order to list of order containing cookies.
+	 * @param array of unfulfilled orders
 	 */
 	public function addOrders ($unfulfilled_orders) {
 		array_push($this -> unfulfilled_orders, $unfulfilled_orders);
 	}
 	
 	/**
-	 * sort array decending by id
+	 * Sort array in decending order by number of cookie and 
 	 */
 	public function sortArray (){
 				
@@ -26,10 +30,6 @@ class UnfulfilledOrders {
 			return ($second->isCookie() < $first->isCookie()) ? -1:1;
 			
 		});
-		
-		foreach($this->unfulfilled_orders as $orders) {
-			 echo $orders->getId();
-		}
 	}
 }
 

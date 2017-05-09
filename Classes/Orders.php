@@ -1,33 +1,24 @@
 <?php
 
 require('classes/products.php');
+
 /**
- * order object
+ * Order object
  * @author Jeremie Fraeys
  *
  */
 class Orders {
 	private $id;
 	private $products = array();
-	/**
-	 * construct of order object
-	 * @param unknown $id
-	 */
+	
 	public function __construct($id) {
 		
 		$this -> id = $id;
 	}
-	/**
-	 * returns the id of the object
-	 * @return int
-	 */
+	
 	public function getId() {
 		
 		return $this->id;
-	}
-	
-	public function getProducts() {
-		return $this->products;
 	}
 	
 	/**

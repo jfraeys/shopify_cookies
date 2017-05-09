@@ -3,6 +3,7 @@
 require('classes/PaginatedAPI.php');
 require('classes/UnfulfilledOrders.php');
 require('classes/Orders.php');
+
 /**
  * Converts the json file data into array
  * @param int $page
@@ -16,7 +17,7 @@ function get_url($page, $api){
 	return $url;
 }
 
-//gets data from json page 1 yyyvvyy
+//gets data from json page 1
 $api = new PaginatedAPI;
 $page = 1;
 $url = get_url($page, $api);
@@ -27,6 +28,7 @@ $res = array();
 
 $available = $url->available_cookies;
 
+//gets data from other json pages, stops looping when page is empty
 while (!empty($url->orders)){
 
 	foreach($url->orders as $orders) {
@@ -51,10 +53,10 @@ while (!empty($url->orders)){
 
 $size = count($unfulfilled_list->unfulfilled_orders);
 
-//sort by object->amount
+// sort by object->amount
 $unfulfilled_list->sortArray();
 
-//removes orders from unfulfilled_orders if enough cookies are availble. Otherwise, adds the id of the order to the results array
+// removes orders from unfulfilled_orders if enough cookies are availble. Otherwise, adds the id of the order to the results array
 for($i = 0; $i < $size; $i++){
  
 	if($unfulfilled_list->unfulfilled_orders[$i]->lessThanAvailable($available) != 0) {
@@ -64,12 +66,13 @@ for($i = 0; $i < $size; $i++){
 	}
 }
 
-//create array that will be encoded into json
+// create array that will be encoded into json
 $output =  array(
 		"remaining_cookies: " => $available,
 		"unfulfilled_orders: " => implode(", ", $res)
 );
 
+// encode $output in json and prints it.
 $json_final = json_encode($output, JSON_PRETTY_PRINT);
 printf("<pre>%s</pre>", $json_final);
 

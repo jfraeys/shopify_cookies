@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Products Object
  * @author Jeremie Fraeys
  *
  */
@@ -8,11 +8,7 @@ class Products {
 	
 	public $title;
 	public $amount;
-	/**
-	 * construct of product object
-	 * @param string $title
-	 * @param int $amount
-	 */
+	
 	public function __construct($title, $amount) {
 		
 		$this->title = $title;
@@ -29,7 +25,7 @@ class Products {
 	
 	/**
 	 * checks for cookies
-	 * @return boolean
+	 * @return either or not the title is cookie
 	 */
 	public function isCookie(){
 		
@@ -43,7 +39,7 @@ class Products {
 	/**
 	 * checks if enough cookie to supply the order 
 	 * @param int $available_cookies
-	 * @return boolean
+	 * @return either or not the order can be fulfilled, if the amount of cookie is available
 	 */
 	public function lessThanAvailable($available_cookies) {
 		
