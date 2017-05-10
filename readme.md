@@ -7,7 +7,11 @@ One of the merchant was facing a problem to keepup with orders of cookies. The m
 
 # Code example:
 
-![alttext]()
+Solution
+![solution](https://cloud.githubusercontent.com/assets/13443851/25878981/ac9b29a6-34fc-11e7-92ab-85a91887d734.PNG)
+
+Sorting algorithm
+![sorting](https://cloud.githubusercontent.com/assets/13443851/25878982/b235e5ea-34fc-11e7-9f42-2471e1fadfad.PNG)
 
 # Motivation: 
 
