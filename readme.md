@@ -11,7 +11,7 @@ One of the merchant was facing a problem to keepup with orders of cookies. The m
 
 # Motivation: 
 
-This is a mini project for an application to Shopify. 
+This is a mini project for an application to Shopify(internship fall 2017). 
 
 The requirement were:
 
@@ -22,7 +22,8 @@ The requirement were:
 5. If an order has an amount of cookies bigger than the remaining cookies, skip the order.
 
 
-# Installation: The source file is in the .zip folder as well as on Github at https://github.com/jfraeys/shopify_cookies.git
+# Installation: 
+The source file is in the .zip folder as well as on Github at https://github.com/jfraeys/shopify_cookies.git
 
 ---
 
