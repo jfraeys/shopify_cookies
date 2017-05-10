@@ -1,10 +1,10 @@
 Jeremie Fraeys 
 
-May 9th
+May 9th, 2017
 
 # Description
 
-One of the merchant was facing a problem to keepup with orders of cookies. The merchant needs help to organize the orders in a way that, one knows how many orders will not be fulfilled. Using a JSON file provided by shopify the data is aquired.
+One of the merchants was facing a problem keeping up with orders for cookies. The merchant needs help to sort and organize cookie orders in a way that will help them to plan their production in order to fulfill the orders. The data was acquired from a JSON file provided by Shopify.
 
 # Code example:
 
@@ -18,9 +18,9 @@ Sorting algorithm
 
 # Motivation: 
 
-This is a mini project for an application to Shopify(internship fall 2017). 
+This is a mini project for an application to Shopify (Internship fall 2017). 
 
-The requirement were:
+The requirements were:
 
 1. Read all orders from the paginated API.
 2. Any order without cookies can be fulfilled.
