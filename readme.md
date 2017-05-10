@@ -13,7 +13,7 @@ Solution
 
 Sorting algorithm
 
-![sorting](https://cloud.githubusercontent.com/assets/13443851/25878982/b235e5ea-34fc-11e7-9f42-2471e1fadfad.PNG)
+![sorting](https://cloud.githubusercontent.com/assets/13443851/25879167/14d457a8-34fe-11e7-840e-bb8c1173dd2b.PNG)
 
 # Motivation: 
 
